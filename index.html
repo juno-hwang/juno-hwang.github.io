@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -263,15 +263,6 @@
     function setStored(v){
       try { localStorage.setItem(k, v); } catch (e) {}
     }
-    function prefersEn(){
-      try {
-        var ls = navigator.languages && navigator.languages.length ? navigator.languages : [navigator.language];
-        for (var i = 0; i < ls.length; i++) {
-          if (String(ls[i]).toLowerCase().indexOf('en') === 0) { return true; }
-        }
-      } catch (e) {}
-      return false;
-    }
     function apply(lang){
       document.body.setAttribute('data-foot-lang', lang);
       document.querySelectorAll('.ui-lang .lb').forEach(function (b) {
@@ -280,7 +271,7 @@
       });
     }
     var stored = getStored();
-    var lang = stored === 'en' || stored === 'ko' ? stored : (prefersEn() ? 'en' : 'ko');
+    var lang = stored === 'en' || stored === 'ko' ? stored : 'ko';
     apply(lang);
     document.querySelectorAll('.ui-lang .lb').forEach(function (b) {
       b.addEventListener('click', function () {

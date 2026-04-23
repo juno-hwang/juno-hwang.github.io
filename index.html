@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Juno Hwang</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet">
+  <style>
+    :root{--blue:#006699;--blue-d:#004d73;--blue-l:#e6f2fa;--ink:#0f1419;--muted:#5c6670;--line:#d8e0e8;--bg:#fff;}
+    *{box-sizing:border-box;}
+    *,*::before,*::after{border-radius:0;}
+    img{border-radius:0!important;}
+    body{margin:0;font-size:15px;line-height:1.55;color:var(--ink);background:var(--bg);}
+    .t-in{position:absolute;opacity:0;width:0;height:0;pointer-events:none;}
+    .app{--page-pad-x:max(1.25rem,calc((100% - 46rem)/2));}
+    .hdr{--logo-h:30px;font-family:"DM Sans",system-ui,sans-serif;-webkit-font-smoothing:antialiased;position:sticky;top:0;z-index:30;background:var(--blue);display:flex;flex-wrap:nowrap;align-items:stretch;justify-content:space-between;gap:0.4rem 0.75rem;padding:0 var(--page-pad-x);min-height:var(--logo-h);height:var(--logo-h);box-sizing:border-box;}
+    .hdr .left{display:flex;align-items:center;flex-shrink:0;gap:0.5rem;min-height:var(--logo-h);}
+    .hdr img{height:var(--logo-h);width:auto;display:block;}
+    .hdr .brand{margin:0;font-size:inherit;font-weight:700;line-height:1;color:#fff;letter-spacing:-0.01em;}
+    .tabs{display:flex;flex-wrap:nowrap;flex:1;min-width:0;gap:0;height:var(--logo-h);align-items:stretch;justify-content:flex-end;box-sizing:border-box;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;}
+    .tabs::-webkit-scrollbar{display:none;}
+    .tabs label{cursor:pointer;display:flex;align-items:center;box-sizing:border-box;height:100%;padding:0 0.65rem;font-size:inherit;font-weight:600;line-height:1;color:rgba(255,255,255,0.75);border:0;border-bottom:0;}
+    .tabs label:hover{color:#fff;}
+    .t-in#tab-a:checked ~ .app label[for="tab-a"],
+    .t-in#tab-b:checked ~ .app label[for="tab-b"],
+    .t-in#tab-c:checked ~ .app label[for="tab-c"]{color:var(--blue);background:#fff;}
+    .wrap{--wpt:1.72rem;position:relative;width:100%;max-width:none;margin:0;padding:var(--wpt) var(--page-pad-x) 3rem;box-sizing:border-box;}
+    .ui-lang{position:absolute;z-index:1;top:var(--wpt);right:var(--page-pad-x);margin:0;display:flex;align-items:flex-start;gap:0.35rem;}
+    .ui-lang .lb{font:inherit;font-size:0.78rem;padding:0.2rem 0.5rem;border:1px solid var(--line);background:var(--bg);cursor:pointer;color:var(--muted);line-height:1.2;font-weight:500;}
+    .ui-lang .lb:hover{color:var(--ink);border-color:#c4ccd4;}
+    .ui-lang .lb[aria-pressed="true"]{color:var(--blue);border-color:var(--blue);font-weight:600;}
+    .p-a h1, .p-b > h2:first-of-type, .p-c .card h2, .p-c > h2:first-of-type{max-width:calc(100% - 5rem);padding-right:0.5rem;box-sizing:border-box;}
+    @media (max-width:480px){.p-a h1, .p-b > h2:first-of-type, .p-c .card h2, .p-c > h2:first-of-type{max-width:calc(100% - 4.25rem);}}
+    .panel{display:none;}
+    .t-in#tab-a:checked ~ .app .p-a{display:block;}
+    .t-in#tab-b:checked ~ .app .p-b{display:block;}
+    .t-in#tab-c:checked ~ .app .p-c{display:block;}
+    h1{margin:0 0 0.4rem;font-size:clamp(1.7rem,4vw,2.15rem);font-weight:700;letter-spacing:-0.02em;}
+    .tagline{margin:0;color:var(--muted);font-size:1rem;}
+    .lede{margin:1.5rem 0 0;padding-top:1.25rem;border-top:2px solid var(--blue);font-size:1rem;max-width:36rem;}
+    h2{margin:0 0 0.75rem;font-size:1.008rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--blue);}
+    .grid{display:grid;gap:1.5rem;}
+    @media (min-width:640px){.grid{grid-template-columns:1.3fr 0.7fr;}}
+    ul{margin:0;padding:0;list-style:none;}
+    .item + .item{margin-top:1.15rem;}
+    .row{display:flex;flex-wrap:wrap;justify-content:space-between;gap:0.5rem 1rem;margin-bottom:0.25rem;}
+    .item-title{margin:0;font-weight:600;font-size:0.98rem;}
+    .meta{margin:0;font-size:0.88rem;color:var(--muted);}
+    .p{margin:0.45rem 0 0;font-size:0.92rem;}
+    .card{background:var(--blue-l);padding:1.1rem 1.15rem;border:1px solid rgba(0,102,153,0.1);}
+    .card h2{margin-bottom:0.5rem;}
+    .chips{display:flex;flex-wrap:wrap;gap:0.35rem;}
+    .chip{display:inline-block;padding:0.22rem 0.55rem;background:#fff;border:1px solid var(--line);font-size:0.78rem;color:var(--blue-d);}
+    a{color:var(--blue);text-decoration:none;}
+    a:hover{text-decoration:underline;}
+    footer{margin-top:2.5rem;padding-top:1.25rem;border-top:1px solid var(--line);font-size:0.85rem;color:var(--muted);}
+    .foot-txt{margin:0;}
+    .foot-txt.ft-en{display:none;}
+    body[data-foot-lang="en"] .foot-txt.ft-ko{display:none;}
+    body[data-foot-lang="en"] .foot-txt.ft-en{display:block;}
+    .about-en{display:none;}
+    body[data-foot-lang="en"] .about-ko{display:none;}
+    body[data-foot-lang="en"] .about-en{display:block;}
+    .md-root{max-width:none;font-size:1rem;line-height:1.48;}
+    .about-hero{display:flex;flex-wrap:wrap;align-items:flex-start;gap:1rem 1.25rem;margin:0 0 1.4rem;}
+    .about-photo{width:120px;height:auto;box-shadow:0 2px 10px 0 rgba(0,0,0,.10);flex-shrink:0;display:block;}
+    .about-hero-text{flex:1;min-width:min(100%,12rem);}
+    .about-hero-text h1{margin:0 0 0.35rem;}
+    .md-root > h2{margin:1.5rem 0 0.32rem;font-size:1.123rem;}
+    .md-root p{margin:0.25rem 0 0.38rem;}
+    .md-root .cv-list{margin:0.12rem 0 0.5rem;}
+    .md-root .cv-list:has(+ ul.md-sub-list),.md-root .cv-list:has(+ ol.md-sub-list){margin-bottom:0.12rem;}
+    .md-root .cv-list .cv-line{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:0.35rem 0.85rem;margin:0;padding:0.32rem 0;border-bottom:1px solid rgba(216,224,232,0.85);font-size:0.98rem;line-height:1.36;}
+    .md-root .cv-list .cv-line:has(+ ul.md-sub-list),.md-root .cv-list .cv-line:has(+ ol.md-sub-list){border-bottom:0;}
+    .md-root .cv-list ul.md-sub-list + .cv-line,.md-root .cv-list ol.md-sub-list + .cv-line{border-top:1px solid rgba(216,224,232,0.85);}
+    .md-root ul.md-sub-list + .cv-list > .cv-line:first-of-type,.md-root ol.md-sub-list + .cv-list > .cv-line:first-of-type{border-top:1px solid rgba(216,224,232,0.85);}
+    .md-root .cv-list .cv-line:last-of-type{border-bottom:0;}
+    .md-root .cv-list .cv-main{flex:1 1 10rem;min-width:0;}
+    .md-root .cv-list .cv-when{flex:0 0 auto;text-align:right;color:var(--muted);font-size:0.9em;font-variant-numeric:tabular-nums;white-space:nowrap;}
+    .md-root .about-hero-text h2{margin:0 0 0.35rem;font-size:1.008rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--blue);}
+    .md-root .about-hero-text p{margin:0;font-size:1rem;line-height:1.48;}
+    .md-root p.about-keywords{margin:0.3rem 0 0;font-size:0.78rem;line-height:1.45;color:var(--muted);letter-spacing:0.01em;max-width:28rem;}
+    .md-root a{color:var(--blue);}
+    .md-root ul.md-sub-list,.md-root ol.md-sub-list{margin:0 0 0.5rem;padding:0.12rem 0 0.22rem 0.65rem;border-top:0;list-style:none;font-size:0.92em;color:var(--muted);line-height:1.36;}
+    .md-root .cv-list > ul.md-sub-list,.md-root .cv-list > ol.md-sub-list{margin:0;}
+    .md-root ul.md-sub-list li,.md-root ol.md-sub-list li{margin:0;padding:0;}
+    .md-root ul.md-sub-list li p,.md-root ol.md-sub-list li p{margin:0;}
+    .md-root li > ul,.md-root li > ol{margin:0.2rem 0 0;padding:0.24rem 0 0.24rem 0.55rem;border-top:1px solid rgba(216,224,232,0.75);list-style:none;font-size:0.92em;color:var(--muted);line-height:1.36;}
+    @media (max-width:480px){
+      .wrap{--wpt:1.33rem;padding-bottom:2.5rem;}
+    }
+  </style>
+</head>
+<body>
+  <input class="t-in" type="radio" name="t" id="tab-a" checked>
+  <input class="t-in" type="radio" name="t" id="tab-b">
+  <input class="t-in" type="radio" name="t" id="tab-c">
+  <div class="app">
+    <header class="hdr">
+      <div class="left">
+        <img src="logo_top.gif" alt="Logo">
+        <p class="brand">Juno Hwang</p>
+      </div>
+      <nav class="tabs" aria-label="Primary">
+        <label for="tab-a">About</label>
+        <label for="tab-b">More</label>
+        <label for="tab-c">Links</label>
+      </nav>
+    </header>
+    <div class="wrap">
+      <div class="ui-lang" role="group" aria-label="Language">
+        <button type="button" class="lb" data-foot-lang="ko" aria-pressed="true" title="Korean">KO</button>
+        <button type="button" class="lb" data-foot-lang="en" aria-pressed="false" title="English">EN</button>
+      </div>
+      <section class="panel p-a" aria-label="About">
+        <div class="about-ko md-root" lang="ko" id="about-md-ko"></div>
+        <div class="about-en md-root" lang="en" id="about-md-en"></div>
+      </section>
+      <section class="panel p-b" aria-label="More">
+        <p class="p" style="margin:0">작성중...</p>
+      </section>
+      <section class="panel p-c" aria-label="Links">
+        <h2>Links</h2>
+        <p class="p" style="margin:0">
+          <a href="https://github.com/juno-hwang" target="_blank" rel="noopener">GitHub</a> ·
+          <a href="https://www.youtube.com/@juno-hwang" target="_blank" rel="noopener">YouTube</a> ·
+          <a href="https://www.instagram.com/juno.hwang/" target="_blank" rel="noopener">Instagram</a>
+        </p>
+        <p class="p" style="margin:0.65rem 0 0;color:var(--muted)">나머지는 작성중...</p>
+      </section>
+      <footer>
+        <p class="foot-txt ft-ko" lang="ko">2026-04-22 한국물리학회 중 대전의 어느 술집에서, <a href="https://kwonminki.github.io/" target="_blank" rel="noopener">친구</a>에게 영감을 받아 만듦.</p>
+        <p class="foot-txt ft-en" lang="en">On 2026-04-22, at a certain bar in Daejeon during the Korean Physical Society Spring Conference — made with inspiration from <a href="https://kwonminki.github.io/" target="_blank" rel="noopener">a friend</a>.</p>
+      </footer>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/marked@11.2.0/marked.min.js"></script>
+  <script>
+  (function(){
+    function isCvSectionTitle(title){
+      var t=String(title).trim();
+      var tl=t.toLowerCase();
+      return tl==='education'||tl==='career'||tl==='certificate'||tl==='credentials'||tl==='teaching assistant'||tl==='teaching experience'||tl==='experience'||tl==='paper'||tl==='papers'||tl==='books'||tl==='awards'||tl==='invited talks'||tl==='invited schools & workshops'||tl==='posters & talks'||tl==='conference presentations'||t==='학력'||t==='경력'||t==='자격'||t==='조교'||t==='수상'||t==='포스터·구두 발표';
+    }
+    function splitCvTrail(text){
+      var m=String(text).replace(/\u00a0/g,' ').trim().match(/^(.*)\s+\(([^)]+)\)\s*$/);
+      if(!m) return null;
+      return { main:m[1].trim(), when:m[2].trim() };
+    }
+    function applyCvLine(p,sp){
+      p.className='cv-line';
+      while(p.firstChild) p.removeChild(p.firstChild);
+      var sm=document.createElement('span'); sm.className='cv-main'; sm.textContent=sp.main;
+      var sw=document.createElement('span'); sw.className='cv-when'; sw.textContent=sp.when;
+      p.appendChild(sm); p.appendChild(sw);
+    }
+    function convertCvParagraph(p){
+      if(typeof marked==='undefined'||typeof marked.parseInline!=='function') return false;
+      var raw=p.innerHTML.split(/<br\s*\/?>/i);
+      var rows=[];
+      for(var i=0;i<raw.length;i++){
+        var tmp=document.createElement('div'); tmp.innerHTML=raw[i];
+        var tx=tmp.textContent.replace(/\u00a0/g,' ').trim();
+        if(tx) rows.push({ text:tx });
+      }
+      if(rows.length===0) return false;
+      var outs=[];
+      var subs=[];
+      var sawSub=false;
+      for(var j=0;j<rows.length;j++){
+        var sp=splitCvTrail(rows[j].text);
+        if(sp){
+          if(sawSub) return false;
+          outs.push(sp);
+        } else if(/^\s*[-*]\s+\S/.test(rows[j].text)&&outs.length>0){
+          sawSub=true;
+          subs.push(rows[j].text.replace(/^\s*[-*]\s+/,'').trim());
+        } else return false;
+      }
+      if(outs.length===0) return false;
+      var wrap=document.createElement('div'); wrap.className='cv-list';
+      for(var k=0;k<outs.length;k++){
+        var pp=document.createElement('p'); applyCvLine(pp,outs[k]); wrap.appendChild(pp);
+      }
+      if(subs.length>0){
+        var ul=document.createElement('ul'); ul.className='md-sub-list';
+        for(var s=0;s<subs.length;s++){
+          var li=document.createElement('li');
+          try{ li.innerHTML=marked.parseInline(subs[s]); }catch(e){ li.textContent=subs[s]; }
+          ul.appendChild(li);
+        }
+        wrap.appendChild(ul);
+      }
+      p.parentNode.replaceChild(wrap,p);
+      return true;
+    }
+    function mergeCvListsAfterH2(h2){
+      var n=h2.nextSibling, anchor=null;
+      while(n){
+        if(n.nodeType===1&&n.tagName==='H2') break;
+        var nx=n.nextSibling;
+        if(n.nodeType===1&&n.tagName==='DIV'&&n.classList.contains('cv-list')){
+          if(anchor){ while(n.firstChild) anchor.appendChild(n.firstChild); n.parentNode.removeChild(n); }
+          else anchor=n;
+        } else if(n.nodeType===1) anchor=null;
+        n=nx;
+      }
+    }
+    function enhanceAboutCv(root){
+      if(!root) return;
+      var h2s=[];
+      for(var c=root.firstChild;c;c=c.nextSibling){
+        if(c.nodeType===1&&c.tagName==='H2') h2s.push(c);
+      }
+      for(var i=0;i<h2s.length;i++){
+        var h2=h2s[i];
+        if(!isCvSectionTitle(h2.textContent)) continue;
+        var n=h2.nextSibling;
+        while(n){
+          if(n.nodeType===1&&n.tagName==='H2') break;
+          var nx=n.nextSibling;
+          if(n.nodeType===1&&n.tagName==='P') convertCvParagraph(n);
+          n=nx;
+        }
+        mergeCvListsAfterH2(h2);
+      }
+    }
+    function enhanceAboutSubLists(root){
+      if(!root) return;
+      var blocks=root.querySelectorAll('.cv-list');
+      for(var i=0;i<blocks.length;i++){
+        var el=blocks[i].nextElementSibling;
+        while(el&&(el.tagName==='UL'||el.tagName==='OL')){
+          el.classList.add('md-sub-list');
+          el=el.nextElementSibling;
+        }
+      }
+    }
+    var ko=document.getElementById('about-md-ko'), en=document.getElementById('about-md-en');
+    if(ko&&en&&typeof marked!=='undefined'){
+      marked.setOptions({ breaks:true, gfm:true });
+      Promise.all([
+        fetch('About.md').then(function(r){ if(!r.ok) throw r; return r.text(); }),
+        fetch('About_en.md').then(function(r){ if(!r.ok) throw r; return r.text(); })
+      ]).then(function(t){
+        ko.innerHTML=marked.parse(t[0]); enhanceAboutCv(ko); enhanceAboutSubLists(ko);
+        en.innerHTML=marked.parse(t[1]); enhanceAboutCv(en); enhanceAboutSubLists(en);
+      }).catch(function(){
+        ko.textContent='About.md을 불러오지 못했습니다. (로컬 파일로 열면 fetch가 막힐 수 있습니다.)';
+        en.textContent='Failed to load About_en.md.';
+      });
+    }
+  })();
+  </script>
+  <script>
+  (function(){
+    var k='juno-cv-foot-lang';
+    function getStored(){
+      try { return localStorage.getItem(k); } catch (e) { return null; }
+    }
+    function setStored(v){
+      try { localStorage.setItem(k, v); } catch (e) {}
+    }
+    function prefersEn(){
+      try {
+        var ls = navigator.languages && navigator.languages.length ? navigator.languages : [navigator.language];
+        for (var i = 0; i < ls.length; i++) {
+          if (String(ls[i]).toLowerCase().indexOf('en') === 0) { return true; }
+        }
+      } catch (e) {}
+      return false;
+    }
+    function apply(lang){
+      document.body.setAttribute('data-foot-lang', lang);
+      document.querySelectorAll('.ui-lang .lb').forEach(function (b) {
+        var is = b.getAttribute('data-foot-lang') === lang;
+        b.setAttribute('aria-pressed', is ? 'true' : 'false');
+      });
+    }
+    var stored = getStored();
+    var lang = stored === 'en' || stored === 'ko' ? stored : (prefersEn() ? 'en' : 'ko');
+    apply(lang);
+    document.querySelectorAll('.ui-lang .lb').forEach(function (b) {
+      b.addEventListener('click', function () {
+        var l = b.getAttribute('data-foot-lang');
+        if (l === 'en' || l === 'ko') { setStored(l); apply(l); }
+      });
+    });
+  })();
+  </script>
+</body>
+</html>

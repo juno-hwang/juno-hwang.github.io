@@ -1,33 +1,43 @@
 <div class="about-hero">
 <img src="photo.jpg" alt="Juno Hwang" class="about-photo">
 <div class="about-hero-text">
-<h1>Juno Hwang</h1>
-<p class="about-keywords"><span class="about-keywords-h">Keywords</span> Statistical physics · Data science · Physics education · Learning science</p>
+<h1>Juno Hwang (황준오)</h1>
 <h2>Contact</h2>
-<p>Room 412, Building 13, Seoul National University, 1 Gwanak-ro, Gwanak-gu, Seoul 08826, Korea<br>
-Phone +82-10-5650-7307 · Email wnsdh10@snu.ac.kr</p>
+<p>Data Science Lab, Department of Physics Education, Seoul National University<br>
+wnsdh10@snu.ac.kr</p>
+<p class="about-keywords"><span class="about-keywords-h">Keywords</span> Statistical physics · Data science · Physics education · Learning science · Diffusion models</p>
 </div>
 </div>
 
 ## Education
 
-Seoul National University — Ph.D. student, Graduate School of Science Education (physics), Data Science Lab (2021–)
+Seoul National University — Integrated M.S./Ph.D. program (Ph.D. coursework completed), Data Science Lab, Department of Physics Education (2021–present)
 
-Seoul National University — B.S., Science Education (physics) & Computational Science (double major) (Feb 2021)
+Seoul National University — B.S., Computational Science (joint major) (2021)
+ - Face- and gaze-tracking mouse system · [Video](https://www.youtube.com/watch?v=RCH1CgKhJyg)
+
+Seoul National University — B.S., Physics Education (2021)
+ - Approximate boundary conditions for low-frequency resonance of low-dimensional wind instruments · [PDF](undergraduate_thesis.pdf)
+
+
+## Career
+
+Professional researcher (doctoral-level substitute national service) (2024–; currently on a deferral semester)
+
+LBox Co., Ltd. — Research intern (Dec 2021 – Feb 2022)
+ - Legal document image augmentation and classification; OCR correction algorithms
+
+## Certificate
+
+Secondary school teacher certificate (Level 2), Physics (2021)
 
 ## Teaching experience
 
-SNU Dept. of Physics Education, *Computational Physics and Education* (Spring 2024)
+SNU Graduate School of Science Education, *Science Education Forum* — Instructor (2026)
+
+SNU Department of Physics Education, *Computational Physics and Education* — Teaching assistant (2023)
 
 SNU Center for Liberal Education, *Introduction to Computing* — Head TA (2019–2023)
-
-## Credentials
-
-Secondary school teacher certificate (Level 2), Physics (Feb 2021)
-
-## Experience
-
-LBox Co. — Research intern: document image enhancement/classification, OCR correction algorithms for legal documents (Dec 2021 – Feb 2022)
 
 ## Papers
 
@@ -53,28 +63,32 @@ LBox Co. — Research intern: document image enhancement/classification, OCR cor
  - H. Soh, D. Kim, J. Hwang & J. Jo · Neural Computation (MIT Press) · [DOI](https://doi.org/10.1162/neco_a_01602)
 
 *Tractable loss function and color image generation of multinary restricted Boltzmann machine* (2020)
- - J. Hwang, W. S. Hwang & J. Jo · NeurIPS 2020 DiffCVGP Workshop · Preprint (arXiv) · [PDF](https://arxiv.org/pdf/2011.13509.pdf)
+ - J. Hwang, W. S. Hwang & J. Jo · NeurIPS 2020 DiffCVGP Workshop · [PDF](https://arxiv.org/pdf/2011.13509.pdf)
 
-## Books
+## Books & Chapters
 
-*Immersive and Engaging Design for Teacher Simulation: Theoretical Foundations and Innovative Approaches* (Accepted, 2026)
+*Immersive and Engaging Design for Teacher Simulation: Theoretical Foundations and Innovative Approaches* (2026)
  - S. Hong, J. Moon, T. Eom, J. Hwang, J. Lim & S. Park · In P. Trifonas (Ed.), *International Handbook of Theory and Research in Digital Media and Education* · Springer · [Handbook (Springer)](https://link.springer.com/book/9783032060631)
 
 *Nonbibeoseo: Schema Concept Dictionary — Science & Technology* (2022)
- - Y.-T. Lee, K.-M. Kim, Y.-O. Choi, J.-W. Han, J. Hwang, Y.-G. Lee, Y.-N. Kim, Y.-J. Lee & I.-T. Kim · Topic-wise schema and essential concepts for the CSAT Korean reading section (science & technology volume) · Hyongseol EMJ · [Kyobo](https://product.kyobobook.co.kr/detail/S000061585941)
+ - Y.-T. Lee, K.-M. Kim, Y.-O. Choi, J.-W. Han, J. Hwang, Y.-G. Lee, Y.-N. Kim, Y.-J. Lee & I.-T. Kim · Schema (topic-wise background knowledge) and essential concepts with practice for CSAT Korean reading passages · Hyongseol EMJ · [Kyobo Book Centre](https://product.kyobobook.co.kr/detail/S000061585941)
 
-## Invited schools & workshops
+## Invited Talks
 
-*KIAS CAC Summer School on Parallel Computing and Artificial Intelligence* (Seoul, 2024)  
-*KIAS CAC Summer School on Parallel Computing and Artificial Intelligence* (Seoul, 2023)  
+*KIAS CAC Summer School on the Parallel Computing and Artificial Intelligence* (Seoul, 2024)  
+
+*KIAS CAC Summer School on the Parallel Computing and Artificial Intelligence* (Seoul, 2023)  
+
 *KIAS Center for AI and Natural Sciences Winter Workshop* (Gangwon, 2023)  
 
 *KIAS Winter School for Physics and Machine Learning* (Online, 2022)  
-- [KIAS Program](http://events.kias.re.kr/h/physAI/?pageNo=4589) — listed as a special-lecture speaker (황준오); includes abstract and materials link.  
+- Special lecture — Generalization and extended models of Boltzmann machines [Link](http://events.kias.re.kr/h/physAI/?pageNo=4589)
 
 *APCTP Workshop for Physics and Machine Learning* (Jeju, 2021)
 
-## Posters & talks
+*Invited talk, in-house AI research seminar, Hyundai Engineering* (Seoul, 2019)
+
+## Conference Presentations
 
 *Facilitating High School Students' Scientific Modeling through Interaction with AI Chatbots with Varied Personas* (2024)
  - H. K. Park, J. Hwang, S. Hong, & S. N. Martin · International Conference on Science Education in the Infosphere · Seoul
@@ -91,24 +105,25 @@ LBox Co. — Research intern: document image enhancement/classification, OCR cor
 *Lesson design and a case study on spring motion using real-time remote physics data collection* (2022)
  - J. Hwang & J. Cho · Regular Conference, The Korean Society for School Science · Siheung
 
+
 *Visualization of Real Magnetic Field Using Sensor and AR* (2018)
  - J. Yoo, J. Park, D. Lee, S. Jin & J. Hwang · American Association of Physics Teachers Winter Meeting · California
 
-*Invited talk, AI club, Hyundai Engineering* (Seoul, 2019)
+## Development
 
 ## Awards
 
 *Best Paper Award, Korean Society for Educational Technology & Korean Society for Information and Media in Education (Joint Fall Conference)* (2023)
- - [KSET 2023 Fall joint conference](https://www.kset.or.kr/conference/81/) · [KSET conference list](https://www.kset.or.kr/index.php?hCode=CONF_03_01) · [KSIME](https://kaeim.jams.or.kr/co/main/jmMain.kci)
+ - Development of a generative AI-based virtual reality lesson simulation for enhancing pre-service teachers' teaching competency · [Award ceremony video](https://youtu.be/mnv9-1i1rt8?si=Xd8lQmd9TpTKcPhG)
 
-*Big Data & AI Competition, Korea East-West Power Co.* (2018)
- - [Korea East-West Power](https://www.ewp.co.kr)
+*Big Data & AI Competition, Korea East-West Power Co. (prize winner)* (2018)
+ - Solar power generation forecasting by climate zone
 
 *Wearable Computer Competition, KAIST (Excellence Award)* (2016)
- - [KAIST news: 2016 Wearable Computer Contest](https://news.kaist.ac.kr/news/html/news/?mode=V&mng_no=2044) · [Local press recap](https://www.seenews365.com/news/articleView.html?idxno=9722)
+ - Team Gorany — Electromyography and IMU sensor-based electronic instrument LaunchWare · [Demo video](https://www.youtube.com/watch?v=_OAI75a8nxA)
 
 *Big Data Fair, Ministry of Science, ICT and Future Planning (1st place)* (2013)
- - [Press: Big Data Fair 2013 at COEX (KCC & MSIP)](https://www.khan.co.kr/article/201312182013071)
+ - Daily movie audience prediction from pre-release signals · [YTN News](https://www.ytn.co.kr/_ln/0105_201312190441553317)
 
 *Korea Wi.Content Contest (Silver)* (2012)
- - [KWC (Korea Wi.Content Contest)](http://www.21kwc.com/)
+ - Game development — *Amazing Shiri* · [List of winners](http://www.21kwc.com/wi/sub06/2013.html)

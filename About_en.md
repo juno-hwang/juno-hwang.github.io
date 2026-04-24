@@ -2,7 +2,7 @@
 <img src="photo.jpg" alt="Juno Hwang" class="about-photo">
 <div class="about-hero-text">
 <h1>Juno Hwang</h1>
-<p class="about-keywords">Statistical physics · Data science · Physics education · Learning science</p>
+<p class="about-keywords"><span class="about-keywords-h">Keywords</span> Statistical physics · Data science · Physics education · Learning science</p>
 <h2>Contact</h2>
 <p>Room 412, Building 13, Seoul National University, 1 Gwanak-ro, Gwanak-gu, Seoul 08826, Korea<br>
 Phone +82-10-5650-7307 · Email wnsdh10@snu.ac.kr</p>
@@ -11,9 +11,9 @@ Phone +82-10-5650-7307 · Email wnsdh10@snu.ac.kr</p>
 
 ## Education
 
-Seoul National University — B.S., Science Education (physics) & Computational Science (double major) (Feb 2021)
-
 Seoul National University — Ph.D. student, Graduate School of Science Education (physics), Data Science Lab (2021–)
+
+Seoul National University — B.S., Science Education (physics) & Computational Science (double major) (Feb 2021)
 
 ## Teaching experience
 
@@ -57,6 +57,12 @@ LBox Co. — Research intern: document image enhancement/classification, OCR cor
 
 ## Books
 
+*Immersive and Engaging Design for Teacher Simulation: Theoretical Foundations and Innovative Approaches* (Accepted, 2026)
+ - S. Hong, J. Moon, T. Eom, J. Hwang, J. Lim & S. Park · In P. Trifonas (Ed.), *International Handbook of Theory and Research in Digital Media and Education* · Springer · [Handbook (Springer)](https://link.springer.com/book/9783032060631)
+
+*Nonbibeoseo: Schema Concept Dictionary — Science & Technology* (2022)
+ - Y.-T. Lee, K.-M. Kim, Y.-O. Choi, J.-W. Han, J. Hwang, Y.-G. Lee, Y.-N. Kim, Y.-J. Lee & I.-T. Kim · Topic-wise schema and essential concepts for the CSAT Korean reading section (science & technology volume) · Hyongseol EMJ · [Kyobo](https://product.kyobobook.co.kr/detail/S000061585941)
+
 ## Invited schools & workshops
 
 *KIAS CAC Summer School on Parallel Computing and Artificial Intelligence* (Seoul, 2024)  
@@ -70,13 +76,24 @@ LBox Co. — Research intern: document image enhancement/classification, OCR cor
 
 ## Posters & talks
 
-*International Conference on Science Education in the Infosphere* (Seoul, 2024)
-*International Society of the Learning Sciences Annual Meeting* (Buffalo, 2024)
-*Spring Conference, Korean Society for Conservation Science of Cultural Heritage* (Seoul, 2024)
-*Joint Fall Conference, Korean Society for Educational Technology & Korean Society for Information and Media in Education* (Seoul, 2023)
-*Conference, Korean Society for Earth Science Education* (Seoul, 2022)
-*Neural Information Processing Systems, DiffCVGP Workshop* (Online, 2020)
-*American Association of Physics Teachers Winter Meeting* (California, 2018)
+*Facilitating High School Students' Scientific Modeling through Interaction with AI Chatbots with Varied Personas* (2024)
+ - H. K. Park, J. Hwang, S. Hong, & S. N. Martin · International Conference on Science Education in the Infosphere · Seoul
+
+*Enhancing Pre-service Teachers' Competence with a Generative Artificial Intelligence-Enhanced Virtual Reality Simulation* (2024)
+ - J. Hwang, S. Hong, T. Eom & C. Lim · International Society of the Learning Sciences Annual Meeting · Buffalo
+
+*Noise- and intensity-robust peak detection for machine-learning-based classification of organic dye SERS signals* (2024)
+ - J. Hwang, D. Lee, S. Kwak, K. Kim, D. Jeong & J. Cho · Spring Conference, Korean Society for Conservation Science of Cultural Heritage · Seoul
+
+*Development of a generative AI-based virtual reality lesson simulation for enhancing pre-service teachers' teaching competency* (2023)
+ - J. Hwang, S. Hong, T. Eom & C. Lim · Joint Fall Conference, Korean Society for Educational Technology & Korean Society for Information and Media in Education · Seoul
+
+*Lesson design and a case study on spring motion using real-time remote physics data collection* (2022)
+ - J. Hwang & J. Cho · Regular Conference, The Korean Society for School Science · Siheung
+
+*Visualization of Real Magnetic Field Using Sensor and AR* (2018)
+ - J. Yoo, J. Park, D. Lee, S. Jin & J. Hwang · American Association of Physics Teachers Winter Meeting · California
+
 *Invited talk, AI club, Hyundai Engineering* (Seoul, 2019)
 
 ## Awards

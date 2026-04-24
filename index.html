@@ -82,6 +82,7 @@
     .md-root .about-hero-text h2{margin:0 0 0.35rem;font-size:1.008rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--blue);}
     .md-root .about-hero-text p{margin:0;font-size:1rem;line-height:1.48;}
     .md-root p.about-keywords{margin:0.3rem 0 0;font-size:0.78rem;line-height:1.45;color:var(--muted);letter-spacing:0.01em;max-width:28rem;}
+    .md-root .about-hero-text .about-keywords-h{font-size:inherit;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--blue);margin-right:0.35em;}
     .md-root a{color:var(--blue);}
     .md-root ul.md-sub-list,.md-root ol.md-sub-list{margin:0 0 0.5rem;padding:0.12rem 0 0.22rem 0.65rem;border-top:0;list-style:none;font-size:0.92em;color:var(--muted);line-height:1.36;}
     .md-root .cv-list > ul.md-sub-list,.md-root .cv-list > ol.md-sub-list{margin:0;}
@@ -142,7 +143,7 @@
     function isCvSectionTitle(title){
       var t=String(title).trim();
       var tl=t.toLowerCase();
-      return tl==='education'||tl==='career'||tl==='certificate'||tl==='credentials'||tl==='teaching assistant'||tl==='teaching experience'||tl==='experience'||tl==='paper'||tl==='papers'||tl==='books'||tl==='awards'||tl==='invited talks'||tl==='invited schools & workshops'||tl==='posters & talks'||tl==='conference presentations'||t==='학력'||t==='경력'||t==='자격'||t==='조교'||t==='수상'||t==='포스터·구두 발표';
+      return tl==='education'||tl==='career'||tl==='certificate'||tl==='credentials'||tl==='teaching assistant'||tl==='teaching experience'||tl==='experience'||tl==='paper'||tl==='papers'||tl==='books'||tl==='books & chapters'||tl==='awards'||tl==='invited talks'||tl==='invited schools & workshops'||tl==='posters & talks'||tl==='conference presentations'||t==='학력'||t==='경력'||t==='자격'||t==='조교'||t==='수상'||t==='포스터·구두 발표';
     }
     function splitCvTrail(text){
       var m=String(text).replace(/\u00a0/g,' ').trim().match(/^(.*)\s+\(([^)]+)\)\s*$/);

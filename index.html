@@ -143,7 +143,7 @@
     function isCvSectionTitle(title){
       var t=String(title).trim();
       var tl=t.toLowerCase();
-      return tl==='education'||tl==='career'||tl==='certificate'||tl==='credentials'||tl==='teaching assistant'||tl==='teaching experience'||tl==='experience'||tl==='paper'||tl==='papers'||tl==='books'||tl==='books & chapters'||tl==='awards'||tl==='invited talks'||tl==='invited schools & workshops'||tl==='posters & talks'||tl==='conference presentations'||t==='학력'||t==='경력'||t==='자격'||t==='조교'||t==='수상'||t==='포스터·구두 발표';
+      return tl==='education'||tl==='career'||tl==='certificate'||tl==='credentials'||tl==='teaching assistant'||tl==='teaching experience'||tl==='experience'||tl==='paper'||tl==='papers'||tl==='books'||tl==='books & chapters'||tl==='awards'||tl==='invited talks'||tl==='invited schools & workshops'||tl==='posters & talks'||tl==='conference presentations'||tl==='research projects'||t==='학력'||t==='경력'||t==='자격'||t==='조교'||t==='수상'||t==='연구과제'||t==='포스터·구두 발표';
     }
     function splitCvTrail(text){
       var m=String(text).replace(/\u00a0/g,' ').trim().match(/^(.*)\s+\(([^)]+)\)\s*$/);

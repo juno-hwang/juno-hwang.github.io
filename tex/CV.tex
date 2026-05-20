@@ -1,0 +1,175 @@
+\documentclass[margin,line]{res}
+\usepackage{kotex}
+\usepackage{xcolor}
+\usepackage{hyperref}
+
+\hypersetup{colorlinks=true,linkcolor=black,urlcolor=blue}
+\urlstyle{same}
+
+\oddsidemargin -.5in
+\evensidemargin -.5in
+\textwidth=6.0in
+\itemsep=0in
+\parsep=0in
+
+\newenvironment{cvitems}{
+  \begin{list}{}{%
+      \setlength{\itemsep}{.1in}
+      \setlength{\parsep}{0in}
+      \setlength{\parskip}{0in}
+      \setlength{\topsep}{.045in}
+      \setlength{\partopsep}{0in}
+      \setlength{\leftmargin}{.17in}}}{\end{list}}
+\newenvironment{cvbullets}{
+  \begin{list}{$\cdot$}{%
+      \setlength{\itemsep}{0in}
+      \setlength{\parsep}{0in}
+      \setlength{\parskip}{0in}
+      \setlength{\topsep}{0in}
+      \setlength{\partopsep}{0in}
+      \setlength{\leftmargin}{.2in}}}{\end{list}}
+\newcommand{\dateditem}[2]{\item #1\hfill #2}
+\newcommand{\projectitem}[4]{\dateditem{#1}{#3}\\[-.02in]{\small #4\\\textit{#2}}}
+\newcommand{\awarditem}[4]{\dateditem{#1}{#2}\\[-.02in]{\small #3\\\textit{#4}}}
+
+\begin{document}
+\name{황준오 Juno Hwang \vspace*{.1in}}
+
+\begin{resume}
+\section{Affiliation}
+Department of Physics Education, Data Science Lab, Seoul National University\\
+Ph.D. Candidate (All but dissertation)
+
+\section{\sc Contact}
+\begin{tabular}{@{}p{.85in}p{5.05in}@{}}
+E-mail & \href{mailto:wnsdh10@snu.ac.kr}{wnsdh10@snu.ac.kr}\\
+Keywords & Statistical physics, Data science, Physics education, Learning science, Diffusion models
+\end{tabular}
+
+\section{\sc Education}
+\textbf{Seoul National University}\hfill Seoul, Korea\\[-.08in]
+\begin{cvitems}
+\dateditem{Integrated M.S./Ph.D., Physics Education \& Data Science Lab}{2021 -- present}
+\begin{cvbullets}
+\item All but dissertation
+\end{cvbullets}
+\dateditem{B.S., Computational Science}{February 2021}
+\begin{cvbullets}
+\item Face and gaze recognition based mouse control
+\end{cvbullets}
+\dateditem{B.S., Physics Education}{February 2021}
+\begin{cvbullets}
+\item Approximation of boundary conditions for low-frequency resonance of low-dimensional wind instruments
+\end{cvbullets}
+\end{cvitems}
+
+\section{\sc Career}
+\begin{cvitems}
+\dateditem{Professional Research Personnel (Alternative Military Service; 박사 전문연구요원)}{2024 -- present}
+\begin{cvbullets}
+\item Currently on deferral
+\end{cvbullets}
+\end{cvitems}
+
+\textbf{LBOX Co., Ltd.} ((주)엘박스)\\[-.08in]
+\begin{cvitems}
+\dateditem{Research Intern}{December 2021 -- February 2022}
+\begin{cvbullets}
+\item Legal document image augmentation and classification
+\item OCR correction algorithm development
+\end{cvbullets}
+\end{cvitems}
+
+\textbf{Vittgen Inc.} ((주)비트겐)\\[-.08in]
+\begin{cvitems}
+\dateditem{Technical Director}{2017 -- 2020}
+\begin{cvbullets}
+\item Overall development of games and interactive media
+\end{cvbullets}
+\end{cvitems}
+
+\section{\sc License \& Certificate}
+Teacher's Certificate, Secondary School Regular Teacher (Grade II) of Physics (교원 자격증, 물리 2급 정교사), February 2021
+
+\section{\sc Teaching Experience}
+\begin{cvitems}
+\dateditem{Seoul National University, Department of Science Education, Instructor for \textit{Science Education Forum} (과학교육포럼)}{2026}
+\dateditem{Seoul National University, Department of Physics Education, Teaching Assistant for \textit{Computational Physics and Education} (전산물리 및 교육)}{2023}
+\dateditem{Seoul National University, Center for Liberal Education, Head Teaching Assistant for \textit{Introduction to Computing} (컴퓨팅 기초)}{2019 -- 2023}
+\end{cvitems}
+
+\section{\sc Papers}
+\begin{cvitems}
+\item S. Hong, J. Moon, T. Eom, \textbf{J. Hwang} \& J. Seo (2026). \textit{Leveraging learning analytics to enhance immersive teacher simulations: Challenges and opportunities}. Preprint (arXiv).
+\item S. Hong, J. Moon, T. Eom, I. D. Awoyemi \& \textbf{J. Hwang} (2025). \textit{Generative AI-Enhanced Virtual Reality Simulation for Pre-Service Teacher Education: A Mixed-Methods Analysis of Usability and Instructional Utility for Course Integration}. \textit{Education Sciences} (MDPI).
+\item Y. Xie, \textbf{J. Hwang}, A. Kim, H. Kim \& Y. H. Cho (2025). \textit{Effect of AI-Powered Virtual Reality Simulation on Pre-Service Teachers' Empathy towards Multicultural Students}. International Conference of the Learning Sciences (ICLS) 2025.
+\item \textbf{J. Hwang}, S. Hong, T. Eom \& C. Lim (2024). \textit{Enhancing Pre-service Teachers' Competence with a Generative Artificial Intelligence-Enhanced Virtual Reality Simulation}. International Society of the Learning Sciences (ISLS) Annual Meeting 2024.
+\item \textbf{J. Hwang}, Y. H. Park \& J. Jo (2026). \textit{Upsample Guidance: Scaling Diffusion Models without Retraining}. Submitted to \textit{IEEE Access}; under review. Preprint (arXiv).
+\item \textbf{J. Hwang}, Y. H. Park \& J. Jo (2023). \textit{Resolution chromatography of diffusion models}. Preprint (arXiv).
+\item H. Soh, D. Kim, \textbf{J. Hwang} \& J. Jo (2023). Mirror descent of Hopfield model. \textit{Neural Computation} (MIT Press), 35(9), 1529--1542.
+\item \textbf{J. Hwang}, W. S. Hwang \& J. Jo (2020). Tractable loss function and color image generation of multinary restricted Boltzmann machine. NeurIPS 2020 DiffCVGP Workshop.
+\end{cvitems}
+
+\section{\sc Books \& Chapters}
+\begin{cvitems}
+\item S. Hong, T. Eom, \textbf{J. Hwang} \& J. Seo (forthcoming). \textit{Leveraging learning analytics to enhance immersive teacher simulations: Challenges and opportunities}. In \textit{Innovations in Immersive Learning for Teacher Education: International Perspective}. Springer. Accepted.
+\item S. Hong, J. Moon, T. Eom, \textbf{J. Hwang}, J. Lim \& S. Park (2026). \textit{Immersive and Engaging Design for Teacher Simulation: Theoretical Foundations and Innovative Approaches}. In P. Trifonas (Ed.), \textit{International Handbook of Theory and Research in Digital Media and Education}. Springer.
+\item Y.-T. Lee, K.-M. Kim, Y.-O. Choi, J.-W. Han, \textbf{J. Hwang}, Y.-G. Lee, Y.-N. Kim, Y.-J. Lee \& I.-T. Kim (2022). \textit{수능 국어 비법서 스키마 개념사전: 과학·기술 (Schema Concept Dictionary for CSAT Korean: Science and Technology)}. Hyongseol EMJ.
+\end{cvitems}
+
+\section{\sc Invited Talks \& Lectures}
+\begin{cvitems}
+\item 2026 The 17th KIAS CAC Summer School on Parallel Computing and Artificial Intelligence --- Hands-on Session Teaching Assistant for \textit{AI-assisted coding and computational automation} (인공지능을 활용한 코딩 및 계산 자동화) \hfill Seoul
+\item 2024 The 15th KIAS CAC Summer School on Parallel Computing and Artificial Intelligence --- Hands-on Session Teaching Assistant for \textit{Diffusion models} \hfill Seoul
+\item 2023 The 14th KIAS CAC Summer School on Parallel Computing and Artificial Intelligence --- Hands-on Session Teaching Assistant for \textit{Theory and practice of diffusion generative models} (확산 생성모형의 이론과 실습) \hfill Seoul
+\item 2022 KIAS Winter School for Physics and Machine Learning --- Generalization and extended models of Boltzmann machines(볼츠만 머신의 일반화와 확장모형) \hfill Online
+\item 2019 Hyundai Engineering In-house AI Research Group Invited Talk (현대엔지니어링 사내 AI 연구회) \hfill Seoul
+\end{cvitems}
+
+\section{\sc Conference Presentations}
+\begin{cvitems}
+\item \textbf{J. Hwang}, Y. H. Park \& J. Jo (2023). \textit{Resolution Chromatography of Diffusion Models}. KIAS Center for AI and Natural Sciences Winter Workshop \hfill Gangwon
+\item \textbf{J. Hwang} \& J. Jo (2021). \textit{Tractable Loss Function and Color Image Generation of Multinary Restricted Boltzmann Machine}. APCTP Workshop for Physics and Machine Learning \hfill Jeju
+
+\item \textbf{J. Hwang} \& J. Jo (2026). \textit{Nonequilibrium Gated Simulated Annealing}. 2026 KPS Spring Meeting (한국물리학회 봄 학술대회) \hfill Daejeon
+\item H. K. Park, \textbf{J. Hwang}, S. Hong \& S. N. Martin (2024). \textit{Facilitating High School Students' Scientific Modeling through Interaction with AI Chatbots with Varied Personas}. International Conference on Science Education in the Infosphere \hfill Seoul
+\item \textbf{J. Hwang}, S. Hong, T. Eom \& C. Lim (2024). \textit{Enhancing Pre-service Teachers' Competence with a Generative Artificial Intelligence-Enhanced Virtual Reality Simulation}. ISLS Annual Meeting \hfill Buffalo
+\item \textbf{J. Hwang}, D. Lee, S. Kwak, K. Kim, D. Jeong \& J. Cho (2024). \textit{Noise- and intensity-robust peak detection for machine-learning-based classification of organic dye SERS signals (유기염료 SERS 신호의 기계학습 기반 분류를 위한 노이즈 및 세기 강건성을 지닌 피크 검출법)}. Korean Society of Conservation Science for Cultural Heritage Spring Conference (한국문화재보존과학회 춘계학술대회) \hfill Seoul
+\item \textbf{J. Hwang} \& J. Jo (2024). \textit{Mode Separating Property of Restricted Boltzmann Machines}. 2024 KPS Spring Meeting (한국물리학회 봄 학술대회) \hfill Daejeon
+\item \textbf{J. Hwang}, S. Hong, T. Eom \& C. Lim (2023). \textit{Development of generative AI-based virtual reality classroom simulation for enhancing pre-service teachers' instructional competence (예비교원의 교수 역량 향상을 위한 생성형 AI 기반의 가상현실 수업 시뮬레이션 개발)}. Joint Fall Conference of KASET \& KEMIE (한국교육공학회·한국교육정보미디어학회 추계공동학술대회) \hfill Seoul
+\item \textbf{J. Hwang} \& J. Cho (2022). \textit{Design and application of spring motion lesson with real-time remote physics data collection (실시간 원격 물리량 데이터 수집을 통한 용수철운동 수업 설계 및 적용 사례 분석)}. Korean Society for Field Science Education Annual Conference (한국현장과학교육학회 정기학술대회) \hfill Siheung
+\item J. Yoo, J. Park, D. Lee, S. Jin \& \textbf{J. Hwang} (2018). \textit{Visualization of Real Magnetic Field Using Sensor and AR}. American Association of Physics Teachers Winter Meeting \hfill California
+\end{cvitems}
+
+\section{\sc Research Projects}
+\begin{cvitems}
+\projectitem{AI-based thermal degradation prediction technology for stone cultural heritage under climate change}{석조문화유산의 AI 기반 기후변화 대응형 열화 예측 기술 개발}{2026.04 -- present}{National Research Institute of Cultural Heritage (국립문화유산연구원)}
+\projectitem{Causal inference of time series}{시계열의 인과추론}{2022.12 -- 2026.02}{Ministry of Science and ICT (과학기술정보통신부)}
+\projectitem{In-situ analysis, diagnosis, and degradation prediction technology for organic dyes}{유기색료의 in-situ 분석·진단·열화예측 기술 개발}{2021.07 -- 2026.02}{National Research Institute of Cultural Heritage (국립문화재연구소)}
+\projectitem{Development and application of webcam-based eye tracking for analyzing English learning processes in digital environments}{디지털 환경에서 영어 학습 과정 분석을 위한 웹캠기반 안구추적 프로그램 개발 및 적용}{2024.12 -- 2025.12}{Seoul National University (서울대학교)}
+\projectitem{Future education innovation and blended creative convergence education based on intelligent information technology}{지능정보기술 기반 미래교육 혁신과 블렌디드 창의융합교육}{2021.06 -- 2025.03}{Korea Foundation for the Advancement of Science and Creativity (한국과학창의재단)}
+\projectitem{Virtual reality simulation development for multicultural education competence}{다문화 교육 역량을 위한 가상현실 시뮬레이션 개발 연구}{2023.12 -- 2024.02}{Seoul National University (서울대학교)}
+\projectitem{Revised course for common graduate curriculum: Introduction to machine learning for AI convergence education}{대학원 공통교과목화를 위한 수정 과제: 인공지능 융합교육을 위한 기계학습 입문}{2023.12 -- 2024.01}{Seoul National University (서울대학교)}
+\projectitem{Virtual reality classroom simulation for enhancing pre-service teachers' instructional competence}{사범대학 예비교원의 교수 역량 향상을 위한 가상현실 수업 시뮬레이션 개발}{2023.06 -- 2023.08}{Seoul National University (서울대학교)}
+\projectitem{VR simulation environment for undergraduate physics education demonstration experiments}{학부 물리교육 시범실험을 위한 VR 시뮬레이션 환경 개발}{2022.11 -- 2023.02}{Seoul National University (서울대학교)}
+\projectitem{Dynamical inference of time series data}{시계열 데이터의 동역학 추론}{2020.01 -- 2022.11}{National Research Foundation of Korea (한국연구재단)}
+\end{cvitems}
+
+\section{\sc Development}
+\begin{cvitems}
+\item \textit{Juno-DKT (Deep Knowledge Tracing) pytorch implementation} --- PyTorch implementation of Deep Knowledge Tracing
+\item \textit{SNUWET} --- Webcam-based screen recording and AI eye-tracking automation platform for web browsers
+\end{cvitems}
+
+\section{\sc Awards}
+\begin{cvitems}
+\awarditem{Best Paper Award (최우수상)}{2023}{Joint Fall Conference of KASET \& KEMIE (한국교육공학회·한국교육정보미디어학회 추계공동학술대회)}{Development of generative AI-based virtual reality classroom simulation for enhancing pre-service teachers' instructional competence}
+\awarditem{Outstanding Project Award (우수프로젝트상)}{2022}{KIAS Winter School for Physics and Machine Learning}{XY Model in Two Dimension \& Coarse Graining via Convolutional RBM}
+\awarditem{Award (입상)}{2018}{Korea East-West Power Big Data \& AI Contest (한국동서발전 빅데이터·AI 경진대회)}{Solar power generation prediction model by climate}
+\awarditem{Excellence Award (우수상)}{2016}{KAIST Wearable Computer Contest (KAIST 웨어러블 컴퓨터 경진대회)}{Team Gorany: EMG and IMU sensor based electronic instrument LaunchWare}
+\awarditem{First Prize (최우수상)}{2013}{Ministry of Science, ICT and Future Planning Big Data Fair (미래창조과학부 빅데이터 페어)}{Daily movie audience prediction algorithm based on pre-release reactions}
+\awarditem{Silver Prize (은상)}{2012}{Korea Wi.Content Contest}{Game development category: Amazing Shiri (어메이징 쉬리)}
+\end{cvitems}
+
+\end{resume}
+\end{document}

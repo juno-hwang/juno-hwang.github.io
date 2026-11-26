@@ -55,11 +55,6 @@
     .chip{display:inline-block;padding:0.22rem 0.55rem;background:#fff;border:1px solid var(--line);font-size:0.78rem;color:var(--blue-d);}
     a{color:var(--blue);text-decoration:none;}
     a:hover{text-decoration:underline;}
-    footer{margin-top:2.5rem;padding-top:1.25rem;border-top:1px solid var(--line);font-size:0.85rem;color:var(--muted);}
-    .foot-txt{margin:0;}
-    .foot-txt.ft-en{display:none;}
-    body[data-foot-lang="en"] .foot-txt.ft-ko{display:none;}
-    body[data-foot-lang="en"] .foot-txt.ft-en{display:block;}
     .about-en{display:none;}
     body[data-foot-lang="en"] .about-ko{display:none;}
     body[data-foot-lang="en"] .about-en{display:block;}
@@ -126,15 +121,11 @@
         <h2>Links</h2>
         <p class="p" style="margin:0">
           <a href="https://github.com/juno-hwang" target="_blank" rel="noopener">GitHub</a> ·
-          <a href="https://www.youtube.com/@juno-hwang" target="_blank" rel="noopener">YouTube</a> ·
-          <a href="https://www.instagram.com/juno.hwang/" target="_blank" rel="noopener">Instagram</a>
+          <a href="https://www.youtube.com/@tvjuno2480" target="_blank" rel="noopener">YouTube (Legacy)</a> ·
+          <a href="https://www.instagram.com/little_shiri/" target="_blank" rel="noopener">Instagram</a>
         </p>
         <p class="p" style="margin:0.65rem 0 0;color:var(--muted)">나머지는 작성중...</p>
       </section>
-      <footer>
-        <p class="foot-txt ft-ko" lang="ko">2026-04-22 한국물리학회 중 대전의 어느 술집에서, <a href="https://kwonminki.github.io/" target="_blank" rel="noopener">친구</a>에게 영감을 받아 만듦.</p>
-        <p class="foot-txt ft-en" lang="en">On 2026-04-22, at a certain bar in Daejeon during the Korean Physical Society Spring Conference — made with inspiration from <a href="https://kwonminki.github.io/" target="_blank" rel="noopener">a friend</a>.</p>
-      </footer>
     </div>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/marked@11.2.0/marked.min.js"></script>
@@ -143,7 +134,7 @@
     function isCvSectionTitle(title){
       var t=String(title).trim();
       var tl=t.toLowerCase();
-      return tl==='education'||tl==='career'||tl==='certificate'||tl==='credentials'||tl==='teaching assistant'||tl==='teaching experience'||tl==='experience'||tl==='paper'||tl==='papers'||tl==='books'||tl==='books & chapters'||tl==='awards'||tl==='invited talks'||tl==='invited schools & workshops'||tl==='posters & talks'||tl==='conference presentations'||tl==='research projects'||t==='학력'||t==='경력'||t==='자격'||t==='조교'||t==='수상'||t==='연구과제'||t==='포스터·구두 발표';
+      return tl==='education'||tl==='career'||tl==='certificate'||tl==='credentials'||tl==='teaching assistant'||tl==='teaching experience'||tl==='experience'||tl==='paper'||tl==='papers'||tl==='books'||tl==='books & chapters'||tl==='awards'||tl==='invited talks'||tl==='invited talks & lectures'||tl==='invited schools & workshops'||tl==='posters & talks'||tl==='conference presentations'||tl==='research projects'||t==='학력'||t==='경력'||t==='자격'||t==='조교'||t==='수상'||t==='연구과제'||t==='포스터·구두 발표';
     }
     function splitCvTrail(text){
       var m=String(text).replace(/\u00a0/g,' ').trim().match(/^(.*)\s+\(([^)]+)\)\s*$/);

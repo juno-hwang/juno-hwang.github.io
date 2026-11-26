@@ -44,6 +44,9 @@ wnsdh10@snu.ac.kr</p>
 
 ## Papers
 
+*Upsample Guidance: Scaling Diffusion Models without Retraining* (2026)
+ - J. Hwang, Y. H. Park & J. Jo · IEEE Access 제출 및 심사 중 · Preprint (arXiv) · [PDF](https://arxiv.org/pdf/2404.01709.pdf)
+
 *Leveraging learning analytics to enhance immersive teacher simulations: Challenges and opportunities* (2026)
  - S. Hong, J. Moon, T. Eom, J. Hwang & J. Seo · Preprint (arXiv) · [PDF](https://arxiv.org/pdf/2601.08954.pdf)
 
@@ -55,9 +58,6 @@ wnsdh10@snu.ac.kr</p>
 
 *Enhancing Pre-service Teachers' Competence with a Generative Artificial Intelligence-Enhanced Virtual Reality Simulation* (2024)
  - J. Hwang, S. Hong, T. Eom & C. Lim · International Society of the Learning Sciences (ISLS) Annual Meeting 2024 · [Proceedings](https://2024.isls.org/proceedings/)
-
-*Upsample Guidance: Scaling Diffusion Models without Retraining* (2026)
- - J. Hwang, Y. H. Park & J. Jo · IEEE Access 제출 및 심사 중 · Preprint (arXiv) · [PDF](https://arxiv.org/pdf/2404.01709.pdf)
 
 *Resolution chromatography of diffusion models* (2023)
  - J. Hwang, Y. H. Park & J. Jo · Preprint (arXiv) · [PDF](https://arxiv.org/pdf/2401.10247.pdf)
@@ -82,7 +82,7 @@ wnsdh10@snu.ac.kr</p>
 ## Invited Talks & Lectures
 
 *The 17th KIAS CAC Summer School on Parallel Computing and Artificial Intelligence* (Seoul, 2026)
- - 실습조교 · 인공지능을 활용한 코딩 및 계산 자동화
+ - 인공지능을 활용한 코딩 및 계산 자동화
 
 *The 15th KIAS CAC Summer School on Parallel Computing and Artificial Intelligence* (Seoul, 2024)
  - 실습조교 · Diffusion models
@@ -94,6 +94,7 @@ wnsdh10@snu.ac.kr</p>
  - 볼츠만머신의 일반화와 확장모형 [Link](http://events.kias.re.kr/h/physAI/?pageNo=4589)
 
 *현대엔지니어링 사내 AI 연구회 초청강연* (Seoul, 2019)
+ - 최대가능도 추정의 이해와 태양광 발전량 예측 모델 개발
 
 ## Conference Presentations
 

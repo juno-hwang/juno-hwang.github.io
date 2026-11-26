@@ -1,57 +1,126 @@
-\documentclass[margin,line]{res}
+\documentclass[overlapped,line]{res}
 \usepackage{kotex}
 \usepackage{xcolor}
 \usepackage{hyperref}
+\usepackage{tabularx}
+\usepackage{newtxtext}
+\usepackage{microtype}
+\usepackage{needspace}
+\usepackage{fancyhdr}
 
-\hypersetup{colorlinks=true,linkcolor=black,urlcolor=blue}
+\definecolor{cvnavy}{HTML}{173B5E}
+\definecolor{cvblue}{HTML}{2B6CA3}
+\definecolor{cvmuted}{HTML}{5F6872}
+\definecolor{cvrule}{HTML}{B8C7D5}
+
+\hypersetup{colorlinks=true,linkcolor=cvnavy,urlcolor=cvblue}
 \urlstyle{same}
 
 \oddsidemargin -.5in
 \evensidemargin -.5in
 \textwidth=6.0in
+\textheight=9.7in
+\topmargin=-.35in
 \itemsep=0in
 \parsep=0in
+\emergencystretch=1.2em
+\linespread{1.02}
+\setlength{\footskip}{.28in}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot[L]{{\scriptsize\color{cvmuted}Juno Hwang --- Curriculum Vitae}}
+\fancyfoot[R]{{\scriptsize\color{cvmuted}\thepage}}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\renewcommand{\namefont}{\LARGE\bfseries\color{cvnavy}}
+\renewcommand{\sectionfont}{\normalsize\bfseries\scshape\color{cvnavy}}
+\renewcommand{\fullline}{%
+  \nointerlineskip
+  \moveleft\hoffset\vbox{\color{cvnavy}\hrule height .8pt width\textwidth}
+  \nointerlineskip}
+\renewcommand{\section}[1]{%
+  \par\Needspace{4\baselineskip}\addvspace{.105in}%
+  \noindent{\sectionfont #1}\par\vspace{.025in}%
+  {\color{cvrule}\hrule height .35pt}\vspace{.045in}%
+  \nopagebreak[3]}
+
+\newcommand{\cvdate}[1]{{\small\color{cvmuted}#1}}
+\newcommand{\cvdetail}[1]{{\small\color{cvmuted}#1}}
+\newcommand{\cvorg}[1]{{\small\bfseries\color{cvblue}#1}}
+\newcommand{\contactlabel}[1]{{\bfseries\color{cvnavy}#1}}
 
 \newenvironment{cvitems}{
   \begin{list}{}{%
-      \setlength{\itemsep}{.1in}
+      \setlength{\itemsep}{.062in}
       \setlength{\parsep}{0in}
       \setlength{\parskip}{0in}
-      \setlength{\topsep}{.045in}
+      \setlength{\topsep}{.025in}
       \setlength{\partopsep}{0in}
-      \setlength{\leftmargin}{.17in}}}{\end{list}}
+      \setlength{\leftmargin}{.12in}
+      \setlength{\rightmargin}{0in}}}{\end{list}}
 \newenvironment{cvbullets}{
-  \begin{list}{$\cdot$}{%
-      \setlength{\itemsep}{0in}
+  \begin{list}{\textcolor{cvblue}{\raisebox{.15ex}{\scriptsize$\bullet$}}}{%
+      \setlength{\itemsep}{.005in}
       \setlength{\parsep}{0in}
       \setlength{\parskip}{0in}
-      \setlength{\topsep}{0in}
+      \setlength{\topsep}{.006in}
       \setlength{\partopsep}{0in}
       \setlength{\leftmargin}{.2in}}}{\end{list}}
-\newcommand{\dateditem}[2]{\item #1\hfill #2}
-\newcommand{\projectitem}[4]{\dateditem{#1}{#3}\\[-.02in]{\small #4\\\textit{#2}}}
-\newcommand{\awarditem}[4]{\dateditem{#1}{#2}\\[-.02in]{\small #3\\\textit{#4}}}
+\newenvironment{cvitemscompact}{
+  \begin{list}{}{%
+      \setlength{\itemsep}{.035in}
+      \setlength{\parsep}{0in}
+      \setlength{\parskip}{0in}
+      \setlength{\topsep}{.018in}
+      \setlength{\partopsep}{0in}
+      \setlength{\leftmargin}{.12in}
+      \setlength{\rightmargin}{0in}}}{\end{list}}
+\newcommand{\dateditem}[2]{%
+  \item\begin{tabularx}{\linewidth}[t]{@{}Xr@{}}%
+  \textbf{#1} & \cvdate{#2}%
+  \end{tabularx}}
+\newcommand{\dateditemplain}[2]{%
+  \item\begin{tabularx}{\linewidth}[t]{@{}Xr@{}}%
+  #1 & \cvdate{#2}%
+  \end{tabularx}}
+\newcommand{\projectitem}[4]{%
+  \item\parbox[t]{\linewidth}{%
+    \begin{tabularx}{\linewidth}{@{}Xr@{}}%
+      \textbf{#1} & \cvdate{#3}%
+    \end{tabularx}\par\vspace{.01in}%
+    \cvorg{#4}\par\vspace{.005in}%
+    \cvdetail{\textit{#2}}}}
+\newcommand{\awarditem}[4]{%
+  \item\parbox[t]{\linewidth}{%
+    \begin{tabularx}{\linewidth}{@{}Xr@{}}%
+      \textbf{#3} & \cvdate{#2}%
+    \end{tabularx}\par\vspace{.005in}%
+    \cvorg{#1}\par\vspace{.005in}%
+    \cvdetail{\textit{#4}}}}
 
 \begin{document}
-\name{황준오 Juno Hwang \vspace*{.1in}}
+\name{황준오 {\large\normalfont\color{cvmuted}Juno Hwang} \vspace*{.06in}}
 
 \begin{resume}
 \section{Affiliation}
-Department of Physics Education, Data Science Lab, Seoul National University\\
-Ph.D. Candidate (All but dissertation)
+\textbf{Department of Physics Education, Data Science Lab, Seoul National University}\\[-.01in]
+\cvdetail{Ph.D. in Education (Physics Major), August 2026}
 
 \section{\sc Contact}
-\begin{tabular}{@{}p{.85in}p{5.05in}@{}}
-E-mail & \href{mailto:wnsdh10@snu.ac.kr}{wnsdh10@snu.ac.kr}\\
-Keywords & Statistical physics, Data science, Physics education, Learning science, Diffusion models
+\begin{tabular}{@{}m{1.08in}m{4.73in}@{}}
+\contactlabel{E-mail} & \href{mailto:wnsdh10@snu.ac.kr}{wnsdh10@snu.ac.kr}\\
+\contactlabel{Google Scholar} & \href{https://scholar.google.com/citations?user=6nMoHb0AAAAJ}{Public profile}\\
+\contactlabel{Keywords} & Statistical physics, Data science, Physics education, Learning science, Diffusion models
 \end{tabular}
 
 \section{\sc Education}
-\textbf{Seoul National University}\hfill Seoul, Korea\\[-.08in]
+\begin{tabularx}{\linewidth}{@{}Xr@{}}\textbf{Seoul National University} & \cvdate{Seoul, Korea}\end{tabularx}\\[-.095in]
 \begin{cvitems}
-\dateditem{Integrated M.S./Ph.D., Physics Education \& Data Science Lab}{2021 -- present}
+\dateditem{Ph.D. in Education, Science Education (Physics Major)}{August 2026}
 \begin{cvbullets}
-\item All but dissertation
+\item Dissertation: \textit{A Unified Perspective on Diffusion Models for Conditional Generation of Structured and Signal-Based Multimodal Data}
 \end{cvbullets}
 \dateditem{B.S., Computational Science}{February 2021}
 \begin{cvbullets}
@@ -65,13 +134,10 @@ Keywords & Statistical physics, Data science, Physics education, Learning scienc
 
 \section{\sc Career}
 \begin{cvitems}
-\dateditem{Professional Research Personnel (Alternative Military Service; 박사 전문연구요원)}{2024 -- present}
-\begin{cvbullets}
-\item Currently on deferral
-\end{cvbullets}
+\dateditem{Professional Research Personnel}{2024 -- present}\\[-.02in]{\small Alternative Military Service (박사 전문연구요원)}
 \end{cvitems}
 
-\textbf{LBOX Co., Ltd.} ((주)엘박스)\\[-.08in]
+\cvorg{LBOX Co., Ltd. ((주)엘박스)}\\[-.06in]
 \begin{cvitems}
 \dateditem{Research Intern}{December 2021 -- February 2022}
 \begin{cvbullets}
@@ -80,7 +146,7 @@ Keywords & Statistical physics, Data science, Physics education, Learning scienc
 \end{cvbullets}
 \end{cvitems}
 
-\textbf{Vittgen Inc.} ((주)비트겐)\\[-.08in]
+\cvorg{Vittgen Inc. ((주)비트겐)}\\[-.06in]
 \begin{cvitems}
 \dateditem{Technical Director}{2017 -- 2020}
 \begin{cvbullets}
@@ -93,23 +159,32 @@ Teacher's Certificate, Secondary School Regular Teacher (Grade II) of Physics (�
 
 \section{\sc Teaching Experience}
 \begin{cvitems}
-\dateditem{Seoul National University, Department of Science Education, Instructor for \textit{Science Education Forum} (과학교육포럼)}{2026}
-\dateditem{Seoul National University, Department of Physics Education, Teaching Assistant for \textit{Computational Physics and Education} (전산물리 및 교육)}{2023}
-\dateditem{Seoul National University, Center for Liberal Education, Head Teaching Assistant for \textit{Introduction to Computing} (컴퓨팅 기초)}{2019 -- 2023}
+\dateditemplain{\textbf{Seoul National University}, Department of Science Education, Instructor for \textit{Science Education Forum} (과학교육포럼)}{2026}
+\dateditemplain{\textbf{Seoul National University}, Department of Physics Education, Teaching Assistant and Weekly Class Instructor for \textit{Computational Physics and Education} (전산물리 및 교육)}{2023}
+\dateditemplain{\textbf{Seoul National University}, Center for Liberal Education, Head Teaching Assistant and Weekly Class Instructor for \textit{Introduction to Computing} (컴퓨팅 기초)}{2019 -- 2023}
+\end{cvitems}
+
+\section{\sc Manuscripts Under Review}
+\begin{cvitems}
+\item \textbf{J. Hwang} \& J. Jo (2026). \textit{Query-Adaptive Diffusion Transformer for Efficient Any-Subset Conditional Sampling on Tabular Data and Beyond}. Manuscript under review.
+\item \parbox[t]{\linewidth}{\textbf{J. Hwang}, S. Kwak, M. S. Cho, J.-J. Lee, D. H. Jeong \& J. Jo (2026). \textit{Robust preprocessing and peak extraction method for machine learning-based classification of surface-enhanced Raman spectroscopy}. Major revision resubmitted to \textit{Chemometrics and Intelligent Laboratory Systems}; \href{https://doi.org/10.2139/ssrn.7121520}{preprint (SSRN)}.}
 \end{cvitems}
 
 \section{\sc Papers}
 \begin{cvitems}
+\item \textbf{J. Hwang} \& J. Jo (2026). \textit{Gated simulated annealing for robust constrained optimization without penalty-weight tuning}. \textit{Journal of the Korean Physical Society}. \href{https://doi.org/10.1007/s40042-026-01697-3}{DOI: 10.1007/s40042-026-01697-3}.
+\item S. Sung, H. Ryu, \textbf{J. Hwang} \& I. C. Jang (2026). \textit{Exploring digital learning processes through webcam-based eye tracking: Development and applications of SNUWET}. In \textit{Proceedings of the 20th International Conference of the Learning Sciences (ICLS 2026)}, 3176--3178.
 \item S. Hong, J. Moon, T. Eom, \textbf{J. Hwang} \& J. Seo (2026). \textit{Leveraging learning analytics to enhance immersive teacher simulations: Challenges and opportunities}. Preprint (arXiv).
-\item S. Hong, J. Moon, T. Eom, I. D. Awoyemi \& \textbf{J. Hwang} (2025). \textit{Generative AI-Enhanced Virtual Reality Simulation for Pre-Service Teacher Education: A Mixed-Methods Analysis of Usability and Instructional Utility for Course Integration}. \textit{Education Sciences} (MDPI).
-\item Y. Xie, \textbf{J. Hwang}, A. Kim, H. Kim \& Y. H. Cho (2025). \textit{Effect of AI-Powered Virtual Reality Simulation on Pre-Service Teachers' Empathy towards Multicultural Students}. International Conference of the Learning Sciences (ICLS) 2025.
-\item \textbf{J. Hwang}, S. Hong, T. Eom \& C. Lim (2024). \textit{Enhancing Pre-service Teachers' Competence with a Generative Artificial Intelligence-Enhanced Virtual Reality Simulation}. International Society of the Learning Sciences (ISLS) Annual Meeting 2024.
 \item \textbf{J. Hwang}, Y. H. Park \& J. Jo (2026). \textit{Upsample Guidance: Scaling Diffusion Models without Retraining}. Submitted to \textit{IEEE Access}; under review. Preprint (arXiv).
+\item S. Hong, J. Moon, T. Eom, I. D. Awoyemi \& \textbf{J. Hwang} (2025). \textit{Generative AI-Enhanced Virtual Reality Simulation for Pre-Service Teacher Education: A Mixed-Methods Analysis of Usability and Instructional Utility for Course Integration}. \textit{Education Sciences}, 15(8), 997. \href{https://doi.org/10.3390/educsci15080997}{DOI: 10.3390/educsci15080997}.
+\item Y. Xie, \textbf{J. Hwang}, A. Kim, H. Kim \& Y. H. Cho (2025). \textit{Effect of AI-Powered Virtual Reality Simulation on Pre-Service Teachers' Empathy towards Multicultural Students}. In \textit{Proceedings of the 19th International Conference of the Learning Sciences (ICLS 2025)}, 2160--2164.
+\item \textbf{J. Hwang}, S. Hong, T. Eom \& C. Lim (2024). \textit{Enhancing Pre-service Teachers' Competence with a Generative Artificial Intelligence-Enhanced Virtual Reality Simulation}. International Society of the Learning Sciences (ISLS) Annual Meeting 2024.
 \item \textbf{J. Hwang}, Y. H. Park \& J. Jo (2023). \textit{Resolution chromatography of diffusion models}. Preprint (arXiv).
 \item H. Soh, D. Kim, \textbf{J. Hwang} \& J. Jo (2023). Mirror descent of Hopfield model. \textit{Neural Computation} (MIT Press), 35(9), 1529--1542.
 \item \textbf{J. Hwang}, W. S. Hwang \& J. Jo (2020). Tractable loss function and color image generation of multinary restricted Boltzmann machine. NeurIPS 2020 DiffCVGP Workshop.
 \end{cvitems}
 
+\Needspace{13\baselineskip}
 \section{\sc Books \& Chapters}
 \begin{cvitems}
 \item S. Hong, T. Eom, \textbf{J. Hwang} \& J. Seo (forthcoming). \textit{Leveraging learning analytics to enhance immersive teacher simulations: Challenges and opportunities}. In \textit{Innovations in Immersive Learning for Teacher Education: International Perspective}. Springer. Accepted.
@@ -119,15 +194,15 @@ Teacher's Certificate, Secondary School Regular Teacher (Grade II) of Physics (�
 
 \section{\sc Invited Talks \& Lectures}
 \begin{cvitems}
-\item 2026 The 17th KIAS CAC Summer School on Parallel Computing and Artificial Intelligence --- Hands-on Session Teaching Assistant for \textit{AI-assisted coding and computational automation} (인공지능을 활용한 코딩 및 계산 자동화) \hfill Seoul
+\item 2026 The 17th KIAS CAC Summer School on Parallel Computing and Artificial Intelligence --- \textit{AI-assisted coding and computational automation} (인공지능을 활용한 코딩 및 계산 자동화) \hfill Seoul
 \item 2024 The 15th KIAS CAC Summer School on Parallel Computing and Artificial Intelligence --- Hands-on Session Teaching Assistant for \textit{Diffusion models} \hfill Seoul
-\item 2023 The 14th KIAS CAC Summer School on Parallel Computing and Artificial Intelligence --- Hands-on Session Teaching Assistant for \textit{Theory and practice of diffusion generative models} (확산 생성모형의 이론과 실습) \hfill Seoul
+\item \parbox[t]{\linewidth}{2023 The 14th KIAS CAC Summer School on Parallel Computing and Artificial Intelligence --- Hands-on Session Teaching Assistant for \textit{Theory and practice of diffusion generative models} (확산 생성모형의 이론과 실습) \hfill Seoul}
 \item 2022 KIAS Winter School for Physics and Machine Learning --- Generalization and extended models of Boltzmann machines(볼츠만 머신의 일반화와 확장모형) \hfill Online
-\item 2019 Hyundai Engineering In-house AI Research Group Invited Talk (현대엔지니어링 사내 AI 연구회) \hfill Seoul
+\item 2019 Hyundai Engineering In-house AI Research Group Invited Talk --- \textit{Understanding maximum likelihood estimation and developing a solar power generation forecasting model} (최대가능도 추정의 이해와 태양광 발전량 예측 모델 개발) \hfill Seoul
 \end{cvitems}
 
 \section{\sc Conference Presentations}
-\begin{cvitems}
+\begin{cvitemscompact}
 \item \textbf{J. Hwang}, Y. H. Park \& J. Jo (2023). \textit{Resolution Chromatography of Diffusion Models}. KIAS Center for AI and Natural Sciences Winter Workshop \hfill Gangwon
 \item \textbf{J. Hwang} \& J. Jo (2021). \textit{Tractable Loss Function and Color Image Generation of Multinary Restricted Boltzmann Machine}. APCTP Workshop for Physics and Machine Learning \hfill Jeju
 
@@ -138,8 +213,8 @@ Teacher's Certificate, Secondary School Regular Teacher (Grade II) of Physics (�
 \item \textbf{J. Hwang} \& J. Jo (2024). \textit{Mode Separating Property of Restricted Boltzmann Machines}. 2024 KPS Spring Meeting (한국물리학회 봄 학술대회) \hfill Daejeon
 \item \textbf{J. Hwang}, S. Hong, T. Eom \& C. Lim (2023). \textit{Development of generative AI-based virtual reality classroom simulation for enhancing pre-service teachers' instructional competence (예비교원의 교수 역량 향상을 위한 생성형 AI 기반의 가상현실 수업 시뮬레이션 개발)}. Joint Fall Conference of KASET \& KEMIE (한국교육공학회·한국교육정보미디어학회 추계공동학술대회) \hfill Seoul
 \item \textbf{J. Hwang} \& J. Cho (2022). \textit{Design and application of spring motion lesson with real-time remote physics data collection (실시간 원격 물리량 데이터 수집을 통한 용수철운동 수업 설계 및 적용 사례 분석)}. Korean Society for Field Science Education Annual Conference (한국현장과학교육학회 정기학술대회) \hfill Siheung
-\item J. Yoo, J. Park, D. Lee, S. Jin \& \textbf{J. Hwang} (2018). \textit{Visualization of Real Magnetic Field Using Sensor and AR}. American Association of Physics Teachers Winter Meeting \hfill California
-\end{cvitems}
+\item \parbox[t]{\linewidth}{J. Yoo, J. Park, D. Lee, S. Jin \& \textbf{J. Hwang} (2018). \textit{Visualization of Real Magnetic Field Using Sensor and AR}. American Association of Physics Teachers Winter Meeting \hfill California}
+\end{cvitemscompact}
 
 \section{\sc Research Projects}
 \begin{cvitems}
@@ -157,14 +232,18 @@ Teacher's Certificate, Secondary School Regular Teacher (Grade II) of Physics (�
 
 \section{\sc Development}
 \begin{cvitems}
-\item \textit{Juno-DKT (Deep Knowledge Tracing) pytorch implementation} --- PyTorch implementation of Deep Knowledge Tracing
-\item \textit{SNUWET} --- Webcam-based screen recording and AI eye-tracking automation platform for web browsers
+\dateditem{\textit{Juno-DKT (Deep Knowledge Tracing)}}{2020}\\[-.02in]{\small PyTorch implementation of Deep Knowledge Tracing}
+\dateditem{\textit{SNUWET}}{2025}\\[-.02in]{\small Webcam-based screen recording and AI eye-tracking automation platform for web browsers}
+\dateditem{\textit{Chasing Light}}{2019}\\[-.02in]{\small Development contribution to Vittgen Inc.'s award-winning indie adventure/simulation game, released on Steam in 2020; 2021 IGF Nuovo Award finalist and 2020 BIC Excellence in Experimental winner}
 \end{cvitems}
 
+\Needspace{8\baselineskip}
 \section{\sc Awards}
 \begin{cvitems}
 \awarditem{Best Paper Award (최우수상)}{2023}{Joint Fall Conference of KASET \& KEMIE (한국교육공학회·한국교육정보미디어학회 추계공동학술대회)}{Development of generative AI-based virtual reality classroom simulation for enhancing pre-service teachers' instructional competence}
 \awarditem{Outstanding Project Award (우수프로젝트상)}{2022}{KIAS Winter School for Physics and Machine Learning}{XY Model in Two Dimension \& Coarse Graining via Convolutional RBM}
+\awarditem{Nuovo Award Finalist}{2021}{Independent Games Festival (IGF) Awards}{Chasing Light}
+\awarditem{Excellence in Experimental}{2020}{Busan Indie Connect Festival (BIC) Awards}{Chasing Light}
 \awarditem{Award (입상)}{2018}{Korea East-West Power Big Data \& AI Contest (한국동서발전 빅데이터·AI 경진대회)}{Solar power generation prediction model by climate}
 \awarditem{Excellence Award (우수상)}{2016}{KAIST Wearable Computer Contest (KAIST 웨어러블 컴퓨터 경진대회)}{Team Gorany: EMG and IMU sensor based electronic instrument LaunchWare}
 \awarditem{First Prize (최우수상)}{2013}{Ministry of Science, ICT and Future Planning Big Data Fair (미래창조과학부 빅데이터 페어)}{Daily movie audience prediction algorithm based on pre-release reactions}

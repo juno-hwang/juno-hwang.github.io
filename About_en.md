@@ -47,6 +47,9 @@ SNU Center for Liberal Education, *Introduction to Computing* — Head TA (2019�
 *Leveraging learning analytics to enhance immersive teacher simulations: Challenges and opportunities* (2026)
  - S. Hong, J. Moon, T. Eom, J. Hwang & J. Seo · Preprint (arXiv) · [PDF](https://arxiv.org/pdf/2601.08954.pdf)
 
+*Upsample Guidance: Scaling Diffusion Models without Retraining* (2026)
+ - J. Hwang, Y. H. Park & J. Jo · Submitted to IEEE Access; under review · Preprint (arXiv) · [PDF](https://arxiv.org/pdf/2404.01709.pdf)
+
 *Generative AI-Enhanced Virtual Reality Simulation for Pre-Service Teacher Education: A Mixed-Methods Analysis of Usability and Instructional Utility for Course Integration* (2025)
  - S. Hong, J. Moon, T. Eom, I. D. Awoyemi & J. Hwang · Education Sciences (MDPI) · [DOI](https://doi.org/10.3390/educsci15080997)
 
@@ -55,9 +58,6 @@ SNU Center for Liberal Education, *Introduction to Computing* — Head TA (2019�
 
 *Enhancing Pre-service Teachers' Competence with a Generative Artificial Intelligence-Enhanced Virtual Reality Simulation* (2024)
  - J. Hwang, S. Hong, T. Eom & C. Lim · International Society of the Learning Sciences (ISLS) Annual Meeting 2024 · [Proceedings](https://2024.isls.org/proceedings/)
-
-*Upsample Guidance: Scaling Diffusion Models without Retraining* (2026)
- - J. Hwang, Y. H. Park & J. Jo · Submitted to IEEE Access; under review · Preprint (arXiv) · [PDF](https://arxiv.org/pdf/2404.01709.pdf)
 
 *Resolution chromatography of diffusion models* (2023)
  - J. Hwang, Y. H. Park & J. Jo · Preprint (arXiv) · [PDF](https://arxiv.org/pdf/2401.10247.pdf)
@@ -82,7 +82,7 @@ SNU Center for Liberal Education, *Introduction to Computing* — Head TA (2019�
 ## Invited Talks & Lectures
 
 *The 17th KIAS CAC Summer School on Parallel Computing and Artificial Intelligence* (Seoul, 2026)
- - Hands-on session teaching assistant — AI-assisted coding and computational automation
+ - AI-assisted coding and computational automation
 
 *The 15th KIAS CAC Summer School on Parallel Computing and Artificial Intelligence* (Seoul, 2024)
  - Hands-on session teaching assistant — Diffusion models
@@ -94,6 +94,7 @@ SNU Center for Liberal Education, *Introduction to Computing* — Head TA (2019�
  - Special lecture — Generalization and extended models of Boltzmann machines [Link](http://events.kias.re.kr/h/physAI/?pageNo=4589)
 
 *Invited talk, in-house AI research seminar, Hyundai Engineering* (Seoul, 2019)
+ - Understanding maximum likelihood estimation and developing a solar power generation forecasting model (최대가능도 추정의 이해와 태양광 발전량 예측 모델 개발)
 
 ## Conference Presentations
 

@@ -4,7 +4,7 @@
 <h1>Juno Hwang (황준오)</h1>
 <h2>Contact</h2>
 <p>Data Science Lab, Department of Physics Education, Seoul National University<br>
-wnsdh10@snu.ac.kr</p>
+wnsdh10@snu.ac.kr · <a href="tex/CV_external.pdf" target="_blank" rel="noopener">CV (PDF)</a></p>
 <p class="about-keywords"><span class="about-keywords-h">Keywords</span> Statistical physics · Data science · Physics education · Learning science · Diffusion models</p>
 </div>
 </div>

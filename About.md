@@ -4,7 +4,7 @@
 <h1>황준오 Juno Hwang</h1>
 <h2>Contact</h2>
 <p>서울대학교 물리교육과 데이터사이언스연구실<br>
-wnsdh10@snu.ac.kr</p>
+wnsdh10@snu.ac.kr · <a href="tex/CV_external.pdf" target="_blank" rel="noopener">CV (PDF)</a></p>
 <p class="about-keywords"><span class="about-keywords-h">Keywords</span>  Statistical physics · Data science · Physics education · Learning science · Diffusion models</p>
 </div>
 </div>
